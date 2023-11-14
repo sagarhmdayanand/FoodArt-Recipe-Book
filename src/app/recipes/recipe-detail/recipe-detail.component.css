@@ -1,0 +1,14 @@
+.row .col-xs-12{
+    padding: 5px;
+}
+
+.row .col-xs-12 .image img{
+  object-fit: cover;
+}
+
+.recipe-details{
+    margin:10px;
+    padding:20px;
+    background-color: #a8a8a8;
+    box-shadow: 0 15px 30px rgb(121, 121, 121), 0 18px 30px rgb(121, 121, 121);
+}

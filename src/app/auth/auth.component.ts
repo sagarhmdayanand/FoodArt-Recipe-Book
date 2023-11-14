@@ -8,7 +8,8 @@ import { alertComponent } from '../shared/alert/alert.component';
 
 @Component({
   selector:'auth-app',
-  templateUrl:'./auth.component.html'
+  templateUrl:'./auth.component.html',
+  styleUrls:['./auth.component.css']
 })
 export class authComponent{
   constructor(private authService:authenticateService,private routes:Router,private componentFactory:ComponentFactoryResolver){}
@@ -32,14 +33,15 @@ export class authComponent{
       if(this.isLogin){
         authObs=this.authService.logIn(email,password);
         this.routes.navigate(['/recipes']);
-      } 
+      }
       else{
+        console.log('ok2');
         authObs=this.authService.signUp(email,password);
       }
 
       authObs.subscribe(
-        (res:any)=>{
-         this.isLoading=false;
+      (res:any)=>{
+        this.isLoading=false;
       },
       (error)=>{
         this.error=error;

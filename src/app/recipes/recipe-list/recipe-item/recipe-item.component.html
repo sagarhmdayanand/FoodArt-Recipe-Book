@@ -2,12 +2,14 @@
 style="cursor:pointer"
 [routerLink]="[index]"
 routerLinkActive="active"
-class="list-group-item clearfix">
-    <div class="pull-left">
+class="list-group-item clearfix"
+style="border-radius:2px;">
+    <div class="pull-left col-md-9 col-sm-9 col-xs-9">
         <h4 class="list-group-item-heading">{{recipe.name}}</h4>
         <p class="list-group-item-text">{{recipe.description}}</p>
     </div>
-    <span class="pull-right">
+    <span class="pull-right col-md-2 col-sm-2 col-xs-2 ml-auto">
         <img [src]="recipe.imagePath" alt="{{recipe.name}}" class="img-responsive" style="max-height:50px;">
     </span>
 </a>
+<br>

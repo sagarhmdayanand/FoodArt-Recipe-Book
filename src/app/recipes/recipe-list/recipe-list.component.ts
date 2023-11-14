@@ -12,6 +12,7 @@ import { Subscription } from 'rxjs-compat/Subscription';
 export class RecipeListComponent implements OnInit,OnDestroy {
   recipes!:Recipe[];
   subscription!:Subscription;
+  recipesLength!:number;
 
    constructor(private rcpSrv:recipeService,private router:Router,private route:ActivatedRoute){}
 
@@ -19,6 +20,7 @@ export class RecipeListComponent implements OnInit,OnDestroy {
     this.subscription=this.rcpSrv.recipesChanged.subscribe(
       (recipe:Recipe[])=>{
         this.recipes=recipe;
+        this.recipesLength=recipe.length;
       }
     )
     this.recipes=this.rcpSrv.getRecipes();

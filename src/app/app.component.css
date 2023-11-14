@@ -1,7 +1,12 @@
-.odd{
-    color:red;
+body{
+    font-family: Arial,Helvetica,sans-serif;
+    
 }
 
 input.ng-invalid.ng-touched{
     border:1px solid red;
+}
+
+.outer{
+    background-color: rgb(231 227 227);
 }

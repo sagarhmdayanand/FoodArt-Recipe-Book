@@ -1,11 +1,19 @@
 <div class="row">
     <div class="col-xs-12">
+        <div><h5>To add New Recipe's Click Here</h5></div>
         <button class="btn btn-success" (click)="onNewRecipe()">New Recipe</button>
     </div>
 </div>
 <hr>
 <div class="row">
     <div class="col-xs-12">
+        <div *ngIf="recipesLength;else recipeListMsg">List of Recipe's are: <br></div>
+        <ng-template #recipeListMsg>
+            <div>
+                <h5>No Recipe's in the List</h5>
+                <br>
+            </div>
+        </ng-template>
         <app-recipe-item *ngFor="let recipeEle of recipes; let i=index" [recipe]="recipeEle" [index]="i"></app-recipe-item>
     </div>
 </div>

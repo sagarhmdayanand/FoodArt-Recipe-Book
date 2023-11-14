@@ -1,0 +1,30 @@
+a{
+    background-color: rgba(212,197,39,.4);
+    box-shadow: 0 10px 20px rgb(121, 121, 121), 0 6px 6px rgb(121, 121, 121);
+}
+
+a:hover{
+    background-color: rgba(212,197,39,.6);
+}
+
+.list-group-item.active, 
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+    background-color: rgba(212,197,39,.6);
+    color: #000;
+    border:none;
+}
+
+.list-group-item.active 
+.list-group-item-text, 
+.list-group-item.active:hover 
+.list-group-item-text, 
+.list-group-item.active:focus 
+.list-group-item-text {
+    color: #000;
+    border:none;
+}
+
+.list-group-item {
+    border: none;
+}
